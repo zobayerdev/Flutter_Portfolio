@@ -6,6 +6,10 @@ import 'package:my_portfolio/assets_helper/app_fonts.dart';
 import 'package:my_portfolio/assets_helper/app_icons.dart';
 import 'package:my_portfolio/assets_helper/app_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_portfolio/features/profile_screen/widget/expirence_widget.dart';
+import 'package:my_portfolio/features/profile_screen/widget/features_project_widget.dart';
+import 'package:my_portfolio/features/profile_screen/widget/proffessonal_experience_widget.dart';
+import 'package:my_portfolio/features/profile_screen/widget/skill_widgets.dart';
 
 class ProfileMobileScreen extends StatefulWidget {
   const ProfileMobileScreen({super.key});
@@ -353,7 +357,7 @@ class _ProfileMobileScreenState extends State<ProfileMobileScreen> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    'Featured Projects',
+                    'Latest Project UI',
                     style: TextFontStyle.headLine22w600Poppins.copyWith(
                       fontSize: 15,
                       color: AppColors.cFFFFFF,
@@ -390,15 +394,30 @@ class _ProfileMobileScreenState extends State<ProfileMobileScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Featured Projects',
-                    style: TextFontStyle.headLine22w600Poppins.copyWith(
-                      fontSize: 15,
-                      color: AppColors.cFFFFFF,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Featured Projects',
+                        style: TextFontStyle.headLine22w600Poppins.copyWith(
+                          fontSize: 15,
+                          color: AppColors.cFFFFFF,
+                        ),
+                      ),
                     ),
-                  ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'See All',
+                        style: TextFontStyle.headLine22w600Poppins.copyWith(
+                          fontSize: 15,
+                          color: AppColors.cFFFFFF,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 15,
@@ -445,201 +464,59 @@ class _ProfileMobileScreenState extends State<ProfileMobileScreen> {
                 //     );
                 //   },
                 // ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Job Experience',
+                    style: TextFontStyle.headLine22w600Poppins.copyWith(
+                      fontSize: 15,
+                      color: AppColors.cFFFFFF,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Column(
+                  children: [
+                    proffesionalExperienceWidget(
+                      experienceCompany: 'Softvence Agency',
+                      experienceTitle: 'Jr. Flutter Developer',
+                      experienceSkills:
+                          'Flutter, Dart, Firebase, iOS, Android, In App Purchase',
+                      experienceYear: '2023 - Present',
+                      experienceImage: AppImages.appLogo,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    proffesionalExperienceWidget(
+                      experienceCompany: 'Trodev IT',
+                      experienceTitle: 'Software Engineer',
+                      experienceSkills:
+                          'Android, Java, Firebase, MySQL, Rest API',
+                      experienceYear: '2022 - 2023',
+                      experienceImage: AppImages.appLogo,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    proffesionalExperienceWidget(
+                      experienceCompany: 'Trodev IT',
+                      experienceTitle: 'Jr. Software Engineer',
+                      experienceSkills:
+                          'Android, Java, Firebase, MySQL, Rest API',
+                      experienceYear: '2021 - 2022',
+                      experienceImage: AppImages.appLogo,
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class featuredProject extends StatelessWidget {
-  final String projectTitle;
-  final String projectDescription;
-  final String projectSkills;
-  final String projectImage;
-  const featuredProject({
-    super.key,
-    required this.projectTitle,
-    required this.projectDescription,
-    required this.projectSkills,
-    required this.projectImage,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 15),
-      child: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: AppColors.c1F1F1F,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Column(
-          children: [
-            Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: AppColors.c1F1F1F,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                children: [
-                  ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                    ),
-                    child: Image.asset(
-                      projectImage,
-                      width: double.infinity,
-                      height: 190,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: [
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            projectTitle,
-                            style:
-                                TextFontStyle.textStyle14w500Poppins.copyWith(
-                              color: AppColors.primaryColor,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            projectDescription,
-                            style:
-                                TextFontStyle.textStyle12w400Poppins.copyWith(
-                              color: AppColors.cFFFFFF,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            projectSkills,
-                            style:
-                                TextFontStyle.smallStyle11w400Poppins.copyWith(
-                              color: AppColors.cFFFFFF,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ExperienceWidget extends StatelessWidget {
-  final String experience;
-  final String experienceTitle;
-  const ExperienceWidget({
-    super.key,
-    required this.experience,
-    required this.experienceTitle,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 170,
-      decoration: BoxDecoration(
-        color: AppColors.c1F1F1F,
-        borderRadius: BorderRadius.circular(5),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 10,
-          vertical: 10,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              experience,
-              style: TextFontStyle.headLine22w600Poppins.copyWith(
-                fontSize: 15,
-                color: AppColors.cFFFFFF,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-              experienceTitle,
-              style: TextFontStyle.headLine22w400Poppins.copyWith(
-                fontSize: 12,
-                color: AppColors.cFFFFFF,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class SkillWidget extends StatelessWidget {
-  final String skillName;
-  final String skillIcon;
-  const SkillWidget({
-    super.key,
-    required this.skillName,
-    required this.skillIcon,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.c1F1F1F,
-        borderRadius: BorderRadius.circular(18),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8),
-        child: Row(
-          children: [
-            SvgPicture.asset(
-              skillIcon,
-              height: 24,
-              width: 24,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Text(
-              skillName,
-              style: TextFontStyle.headLine22w400Poppins.copyWith(
-                fontSize: 12,
-                color: AppColors.cFFFFFF,
-              ),
-            ),
-            const SizedBox(
-              width: 5,
-            ),
-          ],
         ),
       ),
     );
