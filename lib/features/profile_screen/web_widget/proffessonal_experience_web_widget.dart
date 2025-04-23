@@ -5,13 +5,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_portfolio/assets_helper/app_colors.dart';
 import 'package:my_portfolio/assets_helper/app_fonts.dart';
 
-class proffesionalExperienceWidget extends StatelessWidget {
+class proffesionalExperienceWebWidget extends StatelessWidget {
   final String experienceCompany;
   final String experienceTitle;
   final String experienceSkills;
   final String experienceYear;
   final String experienceImage;
-  const proffesionalExperienceWidget({
+
+  const proffesionalExperienceWebWidget({
     super.key,
     required this.experienceCompany,
     required this.experienceTitle,
@@ -23,7 +24,7 @@ class proffesionalExperienceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 450,
       decoration: BoxDecoration(
         color: AppColors.primaryColor,
         borderRadius: BorderRadius.circular(5),

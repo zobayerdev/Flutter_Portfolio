@@ -37,4 +37,7 @@ class AppIcons {
   static const String sqlIcons = '$iconsRoute/sql_icons.svg';
   static const String phpIcons = '$iconsRoute/php_icons.svg';
   static const String androidIcons = '$iconsRoute/android_icons.svg';
+
+  // experience icons
+  static const String notesIcons = '$iconsRoute/skill_icons.svg';
 }

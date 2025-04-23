@@ -13,7 +13,7 @@ class ResponsiveScaffold extends StatelessWidget {
   });
 
   bool isMobile(BuildContext context) =>
-      MediaQuery.of(context).size.width < 600;
+      MediaQuery.of(context).size.width < 400;
 
   bool isTablet(BuildContext context) =>
       MediaQuery.of(context).size.width >= 600 &&

@@ -446,7 +446,7 @@ class _ProfileMobileScreenState extends State<ProfileMobileScreen> {
                       projectTitle: 'Portfolio App',
                       projectDescription: 'This is a description of project',
                       projectSkills: 'Flutter, Dart, Firebase',
-                      projectImage: AppImages.slideImageFour,0
+                      projectImage: AppImages.slideImageFour,
                     ),
                   ],
                 ),
@@ -486,9 +486,9 @@ class _ProfileMobileScreenState extends State<ProfileMobileScreen> {
                       experienceCompany: 'Softvence Agency',
                       experienceTitle: 'Jr. Flutter Developer',
                       experienceSkills:
-                          'Flutter, Dart, Firebase, iOS, Android, In App Purchase',
+                          'Flutter, Dart, Firebase, iOS, Android, \nIn App Purchase',
                       experienceYear: '2023 - Present',
-                      experienceImage: AppImages.appLogo,
+                      experienceImage: AppIcons.notesIcons,
                     ),
                     SizedBox(
                       height: 10,
@@ -499,7 +499,7 @@ class _ProfileMobileScreenState extends State<ProfileMobileScreen> {
                       experienceSkills:
                           'Android, Java, Firebase, MySQL, Rest API',
                       experienceYear: '2022 - 2023',
-                      experienceImage: AppImages.appLogo,
+                      experienceImage: AppIcons.notesIcons,
                     ),
                     SizedBox(
                       height: 10,
@@ -510,7 +510,7 @@ class _ProfileMobileScreenState extends State<ProfileMobileScreen> {
                       experienceSkills:
                           'Android, Java, Firebase, MySQL, Rest API',
                       experienceYear: '2021 - 2022',
-                      experienceImage: AppImages.appLogo,
+                      experienceImage: AppIcons.notesIcons,
                     ),
                   ],
                 ),

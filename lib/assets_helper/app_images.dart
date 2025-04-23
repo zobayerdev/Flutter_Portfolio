@@ -16,6 +16,7 @@ class AppImages {
   static const String wallpaper_3 = '$imageRoute/wallpaper_3.png';
 
   static const String profileImage = '$imageRoute/profile_image.png';
+  static const String bgImages = '$imageRoute/bg_images.png';
   static const String projectImage = '$imageRoute/project_image.png';
 
   static const String slideImageOne = '$imageRoute/slide_image_one.png';
