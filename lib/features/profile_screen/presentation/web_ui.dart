@@ -4,7 +4,9 @@ import 'package:my_portfolio/assets_helper/app_colors.dart';
 import 'package:my_portfolio/assets_helper/app_fonts.dart';
 import 'package:my_portfolio/assets_helper/app_icons.dart';
 import 'package:my_portfolio/assets_helper/app_images.dart';
-import 'package:my_portfolio/features/profile_screen/web_widget/proffessonal_experience_web_widget.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/web_contact_us_screen.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/web_proffessonal_experience_widget.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/web_project_screen.dart';
 import 'package:my_portfolio/features/profile_screen/web_widget/web_skill_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -75,29 +77,51 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                               style:
                                   TextFontStyle.headLine22w600Poppins.copyWith(
                                 fontSize: 15,
-                                color: AppColors.cFFFFFF,
+                                color: AppColors.c3A86FF,
                               ),
                             ),
                             const SizedBox(
                               width: 20,
                             ),
-                            Text(
-                              'Projects',
-                              style:
-                                  TextFontStyle.headLine22w600Poppins.copyWith(
-                                fontSize: 15,
-                                color: AppColors.cFFFFFF,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const WebProjectScreen(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'Projects',
+                                style: TextFontStyle.headLine22w600Poppins
+                                    .copyWith(
+                                  fontSize: 15,
+                                  color: AppColors.cFFFFFF,
+                                ),
                               ),
                             ),
                             const SizedBox(
                               width: 20,
                             ),
-                            Text(
-                              'Contact Me',
-                              style:
-                                  TextFontStyle.headLine22w600Poppins.copyWith(
-                                fontSize: 15,
-                                color: AppColors.cFFFFFF,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ContactUsScreen(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'Contact Me',
+                                style: TextFontStyle.headLine22w600Poppins
+                                    .copyWith(
+                                  fontSize: 15,
+                                  color: AppColors.cFFFFFF,
+                                ),
                               ),
                             ),
                             const SizedBox(

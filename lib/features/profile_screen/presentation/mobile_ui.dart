@@ -6,10 +6,10 @@ import 'package:my_portfolio/assets_helper/app_fonts.dart';
 import 'package:my_portfolio/assets_helper/app_icons.dart';
 import 'package:my_portfolio/assets_helper/app_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_portfolio/features/profile_screen/widget/expirence_widget.dart';
-import 'package:my_portfolio/features/profile_screen/widget/features_project_widget.dart';
-import 'package:my_portfolio/features/profile_screen/widget/proffessonal_experience_widget.dart';
-import 'package:my_portfolio/features/profile_screen/widget/skill_widgets.dart';
+import 'package:my_portfolio/features/profile_screen/mobile_widget/expirence_widget.dart';
+import 'package:my_portfolio/features/profile_screen/mobile_widget/features_project_widget.dart';
+import 'package:my_portfolio/features/profile_screen/mobile_widget/proffessonal_experience_widget.dart';
+import 'package:my_portfolio/features/profile_screen/mobile_widget/skill_widgets.dart';
 
 class ProfileMobileScreen extends StatefulWidget {
   const ProfileMobileScreen({super.key});

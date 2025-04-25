@@ -3,7 +3,7 @@ import 'package:my_portfolio/assets_helper/app_colors.dart';
 import 'package:my_portfolio/assets_helper/app_fonts.dart';
 import 'package:my_portfolio/assets_helper/app_icons.dart';
 import 'package:my_portfolio/assets_helper/app_images.dart';
-import 'package:my_portfolio/features/profile_screen/widget/skill_widgets.dart';
+import 'package:my_portfolio/features/profile_screen/mobile_widget/skill_widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectDetailsScreen extends StatefulWidget {
