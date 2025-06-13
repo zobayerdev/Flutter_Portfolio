@@ -20,4 +20,4 @@ jobs:
           server: ftp.zobayerdev.top
           username: zobayer@zobayerdev.top
           password: "UEU2BJCN2OZD"
-          protocol: ftps // * must add this line to use FTPS
+          protocol: ftps
