@@ -1,20 +1,41 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, unnecessary_string_interpolations
 
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/assets_helper/app_colors.dart';
 import 'package:my_portfolio/assets_helper/app_fonts.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/web_project_details.dart';
 
 class webFeaturedProject extends StatelessWidget {
-  final String projectTitle;
-  final String projectDescription;
-  final String projectSkills;
-  final String projectImage;
+  final String title,
+      description,
+      skills,
+      imageUrl,
+      liveLink,
+      sourceCodeLink,
+      duration,
+      client,
+      techStack,
+      projectType,
+      status,
+      price,
+      playStoreLink,
+      appStoreLink;
   const webFeaturedProject({
     super.key,
-    required this.projectTitle,
-    required this.projectDescription,
-    required this.projectSkills,
-    required this.projectImage,
+    required this.title,
+    required this.description,
+    required this.skills,
+    required this.imageUrl,
+    required this.liveLink,
+    required this.sourceCodeLink,
+    required this.duration,
+    required this.client,
+    required this.techStack,
+    required this.projectType,
+    required this.status,
+    required this.price,
+    required this.playStoreLink,
+    required this.appStoreLink,
   });
 
   @override
@@ -24,12 +45,27 @@ class webFeaturedProject extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           // Navigate to project details screen
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => const ProjectDetailsScreen(),
-          //   ),
-          // );
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => WebProjectDetails(
+                title: '$title',
+                description: '$description',
+                skills: '$skills',
+                imageUrl: '$imageUrl',
+                liveLink: '$liveLink',
+                sourceCodeLink: '$sourceCodeLink',
+                duration: '$duration',
+                client: '$client',
+                techStack: '$techStack',
+                projectType: '$projectType',
+                status: '$status',
+                price: '$price',
+                playStoreLink: '$playStoreLink',
+                appStoreLink: '$appStoreLink',
+              ),
+            ),
+          );
         },
         child: Container(
           width: 300,
@@ -53,7 +89,7 @@ class webFeaturedProject extends StatelessWidget {
                         topRight: Radius.circular(20),
                       ),
                       child: Image.asset(
-                        projectImage,
+                        imageUrl,
                         width: double.infinity,
                         height: 190,
                         fit: BoxFit.cover,
@@ -66,7 +102,7 @@ class webFeaturedProject extends StatelessWidget {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              projectTitle,
+                              title,
                               style:
                                   TextFontStyle.textStyle14w500Poppins.copyWith(
                                 color: AppColors.primaryColor,
@@ -79,7 +115,7 @@ class webFeaturedProject extends StatelessWidget {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              projectDescription,
+                              description,
                               style:
                                   TextFontStyle.textStyle12w400Poppins.copyWith(
                                 color: AppColors.cFFFFFF,
@@ -92,7 +128,7 @@ class webFeaturedProject extends StatelessWidget {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              projectSkills,
+                              skills,
                               style: TextFontStyle.smallStyle11w400Poppins
                                   .copyWith(
                                 color: AppColors.cFFFFFF,
