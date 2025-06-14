@@ -34,6 +34,7 @@ class DataUploadPage extends StatelessWidget {
       mobile: ProfileMobileScreen(),
       tablet: ProfileTabletScreen(),
       desktop: ProfileWebScreen(),
+      
     );
   }
 }
