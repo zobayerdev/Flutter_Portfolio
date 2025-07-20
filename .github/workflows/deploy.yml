@@ -14,11 +14,26 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.x"
+          channel: "stable"
+
+      - name: Build Flutter Web
+        run: |
+          flutter pub get
+          flutter build web --release
+
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.zobayerdev.top
-          username: zobayer@zobayerdev.top
-          password: "UEU2BJCN2OZD"
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
+          server-dir: ./public_html/ # Adjust to your server's web root
+          local-dir: ./build/web/
+          log-level: verbose
+          git-ftp-args: --insecure # Use if FTPS certificate issues occur
