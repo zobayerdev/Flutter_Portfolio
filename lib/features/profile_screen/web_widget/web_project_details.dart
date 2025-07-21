@@ -1,9 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/assets_helper/app_colors.dart';
 import 'package:my_portfolio/assets_helper/app_fonts.dart';
 import 'package:my_portfolio/assets_helper/app_icons.dart';
-import 'package:my_portfolio/assets_helper/app_images.dart';
 import 'package:my_portfolio/features/profile_screen/presentation/web_ui.dart';
 import 'package:my_portfolio/features/profile_screen/web_widget/web_contact_us_screen.dart';
 import 'package:my_portfolio/features/profile_screen/web_widget/web_project_screen.dart';
@@ -62,12 +63,35 @@ class _WebProjectDetailsState extends State<WebProjectDetails> {
   Future<void> _launchFacebook() async {
     final Uri uri = Uri.parse(facebookProfileUrl);
     if (!await launchUrl(uri)) {
-      throw Exception('Could not launch $twitterProfileUrl');
+      throw Exception('Could not launch $facebookProfileUrl');
+    }
+  }
+
+  Future<void> _liveLink() async {
+    final Uri uri = Uri.parse(widget.liveLink);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch ${widget.liveLink}');
+    }
+  }
+
+  Future<void> buySourceCode() async {
+    final Uri uri = Uri.parse(widget.sourceCodeLink);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch ${widget.sourceCodeLink}');
+    }
+  }
+
+  Future<void> appleStore() async {
+    final Uri uri = Uri.parse(widget.appStoreLink);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch ${widget.appStoreLink}');
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    log("===> Description: ${widget.description}");
+
     return Scaffold(
       backgroundColor: AppColors.c0A0A0A,
       body: SafeArea(
@@ -259,7 +283,7 @@ class _WebProjectDetailsState extends State<WebProjectDetails> {
                                   height: 20,
                                 ),
                                 Image.asset(
-                                  AppImages.slideImageOne,
+                                  widget.imageUrl,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -364,7 +388,7 @@ class _WebProjectDetailsState extends State<WebProjectDetails> {
                                 Align(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
-                                    'A comprehensive cloud management platform designed to help enterprises monitor, optimize, and manage their cloud infrastructure across multiple providers. The solution provides real-time insights, cost optimization, and automated resource management.',
+                                    widget.description,
                                     style: TextFontStyle.textStyle12w500Poppins
                                         .copyWith(
                                       color: AppColors.cFFFFFF,
@@ -393,23 +417,36 @@ class _WebProjectDetailsState extends State<WebProjectDetails> {
                                   children: [
                                     GestureDetector(
                                       onTap: () {
-                                        // Add your URL launch code here
+                                        _liveLink();
                                       },
                                       child: Container(
                                         decoration: BoxDecoration(
                                           color: AppColors.c3A86FF,
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(5),
                                         ),
                                         child: Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            'Live Link',
-                                            style: TextFontStyle
-                                                .textStyle12w500Poppins
-                                                .copyWith(
-                                              color: AppColors.cFFFFFF,
-                                            ),
+                                          child: Row(
+                                            children: [
+                                              SvgPicture.asset(
+                                                AppIcons.global,
+                                                width: 20,
+                                                height: 20,
+                                                color: AppColors.cFFFFFF,
+                                              ),
+                                              const SizedBox(
+                                                width: 5,
+                                              ),
+                                              Text(
+                                                'Live Link',
+                                                style: TextFontStyle
+                                                    .textStyle12w500Poppins
+                                                    .copyWith(
+                                                  color: AppColors.cFFFFFF,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -419,23 +456,35 @@ class _WebProjectDetailsState extends State<WebProjectDetails> {
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        // Add your URL launch code here
+                                        _liveLink();
                                       },
                                       child: Container(
                                         decoration: BoxDecoration(
                                           color: AppColors.c3A86FF,
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(5),
                                         ),
                                         child: Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            'Source Code',
-                                            style: TextFontStyle
-                                                .textStyle12w500Poppins
-                                                .copyWith(
-                                              color: AppColors.cFFFFFF,
-                                            ),
+                                          child: Row(
+                                            children: [
+                                              SvgPicture.asset(
+                                                AppIcons.google_play,
+                                                width: 20,
+                                                height: 20,
+                                              ),
+                                              const SizedBox(
+                                                width: 5,
+                                              ),
+                                              Text(
+                                                'Play Store',
+                                                style: TextFontStyle
+                                                    .textStyle12w500Poppins
+                                                    .copyWith(
+                                                  color: AppColors.cFFFFFF,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -445,23 +494,35 @@ class _WebProjectDetailsState extends State<WebProjectDetails> {
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        // Add your URL launch code here
+                                        appleStore();
                                       },
                                       child: Container(
                                         decoration: BoxDecoration(
                                           color: AppColors.c3A86FF,
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(6),
                                         ),
                                         child: Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            'Play Store',
-                                            style: TextFontStyle
-                                                .textStyle12w500Poppins
-                                                .copyWith(
-                                              color: AppColors.cFFFFFF,
-                                            ),
+                                          child: Row(
+                                            children: [
+                                              SvgPicture.asset(
+                                                AppIcons.app_store,
+                                                width: 20,
+                                                height: 20,
+                                              ),
+                                              const SizedBox(
+                                                width: 5,
+                                              ),
+                                              Text(
+                                                'App Store',
+                                                style: TextFontStyle
+                                                    .textStyle12w500Poppins
+                                                    .copyWith(
+                                                  color: AppColors.cFFFFFF,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -471,49 +532,35 @@ class _WebProjectDetailsState extends State<WebProjectDetails> {
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        // Add your URL launch code here
-                                      },
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          color: AppColors.c3A86FF,
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            'App Store',
-                                            style: TextFontStyle
-                                                .textStyle12w500Poppins
-                                                .copyWith(
-                                              color: AppColors.cFFFFFF,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    GestureDetector(
-                                      onTap: () {
-                                        // Add your URL launch code here
+                                        buySourceCode();
                                       },
                                       child: Container(
                                         decoration: BoxDecoration(
                                           color: AppColors.c47B54C,
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(6),
                                         ),
                                         child: Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            'Buy Source Code',
-                                            style: TextFontStyle
-                                                .textStyle12w500Poppins
-                                                .copyWith(
-                                              color: AppColors.cFFFFFF,
-                                            ),
+                                          child: Row(
+                                            children: [
+                                              SvgPicture.asset(
+                                                AppIcons.google_drive,
+                                                width: 20,
+                                                height: 20,
+                                              ),
+                                              const SizedBox(
+                                                width: 5,
+                                              ),
+                                              Text(
+                                                'Buy Source Code',
+                                                style: TextFontStyle
+                                                    .textStyle12w500Poppins
+                                                    .copyWith(
+                                                  color: AppColors.cFFFFFF,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ),

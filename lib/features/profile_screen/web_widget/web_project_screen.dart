@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/assets_helper/app_colors.dart';
+import 'package:my_portfolio/assets_helper/app_description.dart';
 import 'package:my_portfolio/assets_helper/app_fonts.dart';
 import 'package:my_portfolio/assets_helper/app_icons.dart';
 import 'package:my_portfolio/assets_helper/app_images.dart';
@@ -188,186 +189,112 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                           const SizedBox(
                             height: 20,
                           ),
+
+                          // * First Row [Trip Guide, Wifi Bill Manager, Holistic Horse Remedies]
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              // * Ttrip Guide Project
                               webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
+                                title: 'Trip Guide',
+                                description:
+                                    AppDescription.tripGuideDescription,
+                                skills: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                imageUrl: AppImages.trip_guide,
                                 liveLink: 'Preview Link',
                                 sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
+                                duration: '2 month',
                                 client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
+                                techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                projectType: 'Guide App Related',
                                 status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
+                                price: 'Negotiable',
+                                playStoreLink: 'Not Available',
+                                appStoreLink: 'Not Available',
+                                shortDescription:
+                                    '🚀 TourGuide: Your Ultimate Travel Companion',
                               ),
                               SizedBox(
                                 width: 20,
                               ),
+                              // * Wifi Bill Project
                               webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
+                                title: 'Wifi Bill Manager',
+                                description:
+                                    AppDescription.wifiBillManagerDescription,
+                                skills: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                imageUrl: AppImages.wifi_bill_manager,
                                 liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
+                                sourceCodeLink:
+                                    'https://api.whatsapp.com/send/?phone=%2B8801615257555&text&type=phone_number&app_absent=0',
+                                duration: '2 month',
                                 client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
+                                techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                projectType: 'Billing App Related',
                                 status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
+                                price: 'Negotiable',
+                                playStoreLink: 'Not Available',
+                                appStoreLink: 'Not Available',
+                                shortDescription:
+                                    '🚀 WiFi Billing Manager: Streamlined Billing & Customer Management',
                               ),
+
                               SizedBox(
                                 width: 20,
                               ),
+                              // * Holistic Horse Remedies Project
                               webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
-                                liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
-                                client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
+                                title: 'Holistic Horse Remedies',
+                                description: AppDescription.udit,
+                                skills: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                imageUrl: AppImages.udit,
+                                liveLink:
+                                    'https://play.google.com/store/apps/details?id=com.theholistichorseworks.app&hl=en',
+                                sourceCodeLink: 'Not Available',
+                                duration: '2 month',
+                                client: 'Holistic Horse Works Group',
+                                techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                projectType: 'Horse Training Related',
                                 status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
+                                price: 'Negotiable',
+                                playStoreLink:
+                                    'https://play.google.com/store/apps/details?id=com.theholistichorseworks.app&hl=en',
+                                appStoreLink:
+                                    'https://apps.apple.com/us/app/holistic-horseworks-remedies/id6742052548',
+                                shortDescription:
+                                    '🚀 Holistic Horse Remedies: Empowering Equine Wellness',
                               ),
                             ],
                           ),
                           const SizedBox(
                             height: 20,
                           ),
+
+                          // * Second Row [Trip Guide, ]
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              // * UIP TV App
                               webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
+                                title: 'UIP TV App',
+                                description: AppDescription.tvApp,
+                                skills: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                imageUrl: AppImages.tvApp,
                                 liveLink: 'Preview Link',
                                 sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
+                                duration: '1 Weeks',
                                 client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
+                                techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                projectType: 'Streaming App Related',
                                 status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
+                                price: 'Negotiable',
+                                playStoreLink: 'Not Available',
+                                appStoreLink: 'Not Available',
+                                shortDescription:
+                                    '🚀 UIP TV: Your Ultimate Streaming Companion',
                               ),
                               SizedBox(
                                 width: 20,
-                              ),
-                              webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
-                                liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
-                                client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
-                                status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
-                                liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
-                                client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
-                                status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
-                                liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
-                                client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
-                                status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
-                                liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
-                                client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
-                                status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              webFeaturedProject(
-                                title: 'Portfolio Website',
-                                description: 'This is a description of project',
-                                skills: 'Flutter, Dart, Firebase',
-                                imageUrl: AppImages.slideImageOne,
-                                liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
-                                duration: '8 month',
-                                client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, Firebase',
-                                projectType: 'Enterprice',
-                                status: 'Completed',
-                                price: '0.00',
-                                playStoreLink: 'playstore link',
-                                appStoreLink: 'App Store link',
                               ),
                             ],
                           ),

@@ -1,13 +1,17 @@
 // ignore_for_file: camel_case_types, unnecessary_string_interpolations
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/assets_helper/app_colors.dart';
 import 'package:my_portfolio/assets_helper/app_fonts.dart';
+import 'package:my_portfolio/common_widgets/custom_button.dart';
 import 'package:my_portfolio/features/profile_screen/web_widget/web_project_details.dart';
 
 class webFeaturedProject extends StatelessWidget {
   final String title,
       description,
+      shortDescription,
       skills,
       imageUrl,
       liveLink,
@@ -36,36 +40,18 @@ class webFeaturedProject extends StatelessWidget {
     required this.price,
     required this.playStoreLink,
     required this.appStoreLink,
+    required this.shortDescription,
   });
 
   @override
   Widget build(BuildContext context) {
+    log("===> Description: $description");
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: GestureDetector(
         onTap: () {
           // Navigate to project details screen
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => WebProjectDetails(
-                title: '$title',
-                description: '$description',
-                skills: '$skills',
-                imageUrl: '$imageUrl',
-                liveLink: '$liveLink',
-                sourceCodeLink: '$sourceCodeLink',
-                duration: '$duration',
-                client: '$client',
-                techStack: '$techStack',
-                projectType: '$projectType',
-                status: '$status',
-                price: '$price',
-                playStoreLink: '$playStoreLink',
-                appStoreLink: '$appStoreLink',
-              ),
-            ),
-          );
         },
         child: Container(
           width: 300,
@@ -115,7 +101,7 @@ class webFeaturedProject extends StatelessWidget {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              description,
+                              shortDescription,
                               style:
                                   TextFontStyle.textStyle12w400Poppins.copyWith(
                                 color: AppColors.cFFFFFF,
@@ -125,16 +111,35 @@ class webFeaturedProject extends StatelessWidget {
                           const SizedBox(
                             height: 10,
                           ),
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              skills,
-                              style: TextFontStyle.smallStyle11w400Poppins
-                                  .copyWith(
-                                color: AppColors.cFFFFFF,
-                              ),
-                            ),
-                          ),
+                          customButton(
+                            name: 'View Details',
+                            color: AppColors.primaryColor,
+                            onCallBack: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => WebProjectDetails(
+                                    title: '$title',
+                                    description: '$description',
+                                    skills: '$skills',
+                                    imageUrl: '$imageUrl',
+                                    liveLink: '$liveLink',
+                                    sourceCodeLink: '$sourceCodeLink',
+                                    duration: '$duration',
+                                    client: '$client',
+                                    techStack: '$techStack',
+                                    projectType: '$projectType',
+                                    status: '$status',
+                                    price: '$price',
+                                    playStoreLink: '$playStoreLink',
+                                    appStoreLink: '$appStoreLink',
+                                  ),
+                                ),
+                              );
+                            },
+                            context: context,
+                            height: 40,
+                          )
                         ],
                       ),
                     ),

@@ -25,4 +25,10 @@ class AppImages {
   static const String slideImageFour = '$imageRoute/slide_image_four.png';
   static const String slideImageFive = '$imageRoute/slide_image_five.png';
   static const String slideImageSix = '$imageRoute/slide_image_six.png';
+
+  // * Project Images
+  static const String trip_guide = '$imageRoute/trip_guide.jpeg';
+  static const String wifi_bill_manager = '$imageRoute/wifi_bill_manager.jpeg';
+  static const String udit = '$imageRoute/udit.jpeg';
+  static const String tvApp = '$imageRoute/movie.jpeg';
 }

@@ -40,4 +40,10 @@ class AppIcons {
 
   // experience icons
   static const String notesIcons = '$iconsRoute/skill_icons.svg';
+
+  // * Project Icons
+  static const String global = '$iconsRoute/global.svg';
+  static const String google_play = '$iconsRoute/google_play.svg';
+  static const String app_store = '$iconsRoute/app_store.svg';
+  static const String google_drive = '$iconsRoute/google_drive.svg';
 }

@@ -18,9 +18,13 @@ class ProfileWebScreen extends StatefulWidget {
 }
 
 class _ProfileWebScreenState extends State<ProfileWebScreen> {
+  
   final String twitterProfileUrl = 'https://twitter.com/your_twitter_handle';
   final String facebookProfileUrl =
       'https://www.facebook.com/zobayer.hasan.nayem';
+  final String githubProfileUrl = 'https://github.com/zobayerdev';
+  final String instagramProfileUrl = 'https://www.instagram.com/zobayerdev/';
+  final String linkedinProfileUrl = 'https://www.linkedin.com/in/zobayerdev/';
 
   Future<void> _launchTwitter() async {
     final Uri uri = Uri.parse(twitterProfileUrl);
@@ -32,7 +36,28 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
   Future<void> _launchFacebook() async {
     final Uri uri = Uri.parse(facebookProfileUrl);
     if (!await launchUrl(uri)) {
-      throw Exception('Could not launch $twitterProfileUrl');
+      throw Exception('Could not launch $facebookProfileUrl');
+    }
+  }
+
+  Future<void> _launchGithub() async {
+    final Uri uri = Uri.parse(githubProfileUrl);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch $githubProfileUrl');
+    }
+  }
+
+  Future<void> _launchLinkedin() async {
+    final Uri uri = Uri.parse(linkedinProfileUrl);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch $linkedinProfileUrl');
+    }
+  }
+
+  Future<void> _launchInstagram() async {
+    final Uri uri = Uri.parse(instagramProfileUrl);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch $instagramProfileUrl');
     }
   }
 
@@ -202,7 +227,15 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                                       borderRadius: BorderRadius.circular(5),
                                     ),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const WebProjectScreen(),
+                                      ),
+                                    );
+                                  },
                                   child: Text(
                                     'View My Work',
                                     style: TextFontStyle.textStyle12w400Poppins
@@ -260,18 +293,222 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                             horizontal: 15.0, vertical: 10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Image.asset(
-                              AppImages.bgImages,
-                              height: 500,
-                              width: 500,
+                            // * Educattion Pard
+                            // Column(
+                            //   crossAxisAlignment: CrossAxisAlignment.start,
+                            //   children: [
+                            //     Row(
+                            //       children: [
+                            //         Text(
+                            //           "🎓 Bsc in Computer Science and Engineering",
+                            //           style: TextFontStyle
+                            //               .textStyle12w400Poppins
+                            //               .copyWith(
+                            //             fontSize: 13,
+                            //             color: AppColors.white,
+                            //           ),
+                            //         ),
+                            //       ],
+                            //     ),
+                            //     const SizedBox(
+                            //       height: 5,
+                            //     ),
+                            //     Row(
+                            //       children: [
+                            //         Text(
+                            //           "💼 3+ years of proffessional experience",
+                            //           style: TextFontStyle
+                            //               .textStyle12w400Poppins
+                            //               .copyWith(
+                            //             fontSize: 13,
+                            //             color: AppColors.white,
+                            //           ),
+                            //         ),
+                            //       ],
+                            //     ),
+                            //     const SizedBox(
+                            //       height: 5,
+                            //     ),
+                            //     Row(
+                            //       children: [
+                            //         Text(
+                            //           "🏢 Worked with 3 companies",
+                            //           style: TextFontStyle
+                            //               .textStyle12w400Poppins
+                            //               .copyWith(
+                            //             fontSize: 13,
+                            //             color: AppColors.white,
+                            //           ),
+                            //         ),
+                            //       ],
+                            //     ),
+                            //   ],
+                            // ),
+
+                            // * Education Part
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // * Bachelor's Degree
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "🎓 Bsc in Computer Science and Engineering",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.primaryColor,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - Bangladesh University of Business and Technology (BUBT)",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - 2020 - 2024",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - Final Year Project: 'Bangla Character Handwritten Recognition'",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+
+                                // * Higher Secondary Certificate (HSC)
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "🎓 Higher Secondary Certificate (HSC)",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 16,
+                                        color: AppColors.primaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - Bangladesh Air Force Shaheen College, Kurmitola",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - 2017 - 2019",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - Major: 'Science'",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+
+                                // * Secondary School Certificate (SSC)
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "🎓 Secondary School Certificate (SSC)",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 16,
+                                        color: AppColors.primaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - Isphani High School & College",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - 2016 - 2017",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      "      - Major: 'Science'",
+                                      style: TextFontStyle
+                                          .textStyle12w400Poppins
+                                          .copyWith(
+                                        fontSize: 13,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                            // 2nd part
+
+                            // * Skill Part
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "With over 5 years of experience in web development,\nI specialize in building scalable applications using modern\ntechnologies.\nMy passion lies in creating efficient solutions that solve real-world problems.",
+                                  "I am a Proffessional Mobile App Developer (android & iOS)",
+                                  style: TextFontStyle.textStyle12w400Poppins
+                                      .copyWith(
+                                    fontSize: 16,
+                                    color: AppColors.primaryColor,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "With over 3 years of experience in Mobile Application development,\nI specialize in building scalable applications using modern\ntechnologies.\nMy passion lies in creating efficient solutions that solve real-world problems.",
                                   style: TextFontStyle.textStyle12w400Poppins
                                       .copyWith(
                                     fontSize: 13,
@@ -396,56 +633,6 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                                     ),
                                   ],
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "🎓 Bsc in Computer Science and Engineering",
-                                          style: TextFontStyle
-                                              .textStyle12w400Poppins
-                                              .copyWith(
-                                            fontSize: 13,
-                                            color: AppColors.white,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "💼 3+ years of proffessional experience",
-                                          style: TextFontStyle
-                                              .textStyle12w400Poppins
-                                              .copyWith(
-                                            fontSize: 13,
-                                            color: AppColors.white,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "🏢 Worked with 3 companies",
-                                          style: TextFontStyle
-                                              .textStyle12w400Poppins
-                                              .copyWith(
-                                            fontSize: 13,
-                                            color: AppColors.white,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
                               ],
                             ),
                           ],
@@ -553,6 +740,8 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
               const SizedBox(
                 height: 10,
               ),
+
+              // * Bottom Nav Section
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 5,
@@ -602,27 +791,36 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      SvgPicture.asset(
-                                        AppIcons.githubIcons,
-                                        width: 24,
-                                        height: 24,
-                                        color: AppColors.cFFFFFF,
+                                      GestureDetector(
+                                        onTap: _launchGithub,
+                                        child: SvgPicture.asset(
+                                          AppIcons.githubIcons,
+                                          width: 24,
+                                          height: 24,
+                                          color: AppColors.cFFFFFF,
+                                        ),
                                       ),
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      SvgPicture.asset(
-                                        AppIcons.linkedinIcons,
-                                        width: 24,
-                                        height: 24,
+                                      GestureDetector(
+                                        onTap: _launchLinkedin,
+                                        child: SvgPicture.asset(
+                                          AppIcons.linkedinIcons,
+                                          width: 24,
+                                          height: 24,
+                                        ),
                                       ),
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      SvgPicture.asset(
-                                        AppIcons.instagramIcons,
-                                        width: 24,
-                                        height: 24,
+                                      GestureDetector(
+                                        onTap: _launchInstagram,
+                                        child: SvgPicture.asset(
+                                          AppIcons.instagramIcons,
+                                          width: 24,
+                                          height: 24,
+                                        ),
                                       ),
                                       const SizedBox(
                                         width: 10,
@@ -637,6 +835,8 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                                       ),
                                     ],
                                   ),
+                                
+                                
                                 ],
                               ),
                               const SizedBox(
