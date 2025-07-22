@@ -194,15 +194,16 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // * Ttrip Guide Project
+                              // * Trip Guide Project
                               webFeaturedProject(
                                 title: 'Trip Guide',
                                 description:
                                     AppDescription.tripGuideDescription,
                                 skills: 'Flutter, Dart, PHP, Laravel, MySQL',
                                 imageUrl: AppImages.trip_guide,
-                                liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
+                                liveLink: 'https://tripguide.zobayerdev.top',
+                                sourceCodeLink:
+                                    'https://api.whatsapp.com/send/?phone=%2B8801615257555&text&type=phone_number&app_absent=0',
                                 duration: '2 month',
                                 client: 'Trodev IT',
                                 techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
@@ -224,7 +225,7 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                                     AppDescription.wifiBillManagerDescription,
                                 skills: 'Flutter, Dart, PHP, Laravel, MySQL',
                                 imageUrl: AppImages.wifi_bill_manager,
-                                liveLink: 'Preview Link',
+                                liveLink: 'https://wifibill.zobayerdev.top',
                                 sourceCodeLink:
                                     'https://api.whatsapp.com/send/?phone=%2B8801615257555&text&type=phone_number&app_absent=0',
                                 duration: '2 month',
@@ -242,6 +243,7 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                               SizedBox(
                                 width: 20,
                               ),
+
                               // * Holistic Horse Remedies Project
                               webFeaturedProject(
                                 title: 'Holistic Horse Remedies',
@@ -280,8 +282,9 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                                 description: AppDescription.tvApp,
                                 skills: 'Flutter, Dart, PHP, Laravel, MySQL',
                                 imageUrl: AppImages.tvApp,
-                                liveLink: 'Preview Link',
-                                sourceCodeLink: 'Source Code Link',
+                                liveLink: 'https://uiptv.zobayerdev.top',
+                                sourceCodeLink:
+                                    'https://api.whatsapp.com/send/?phone=%2B8801615257555&text&type=phone_number&app_absent=0',
                                 duration: '1 Weeks',
                                 client: 'Trodev IT',
                                 techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
