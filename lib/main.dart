@@ -1,5 +1,4 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/features/profile_screen/presentation/mobile_ui.dart';
 import 'package:my_portfolio/features/profile_screen/presentation/tablet_ui.dart';
