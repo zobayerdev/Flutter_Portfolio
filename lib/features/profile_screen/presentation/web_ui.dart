@@ -5,9 +5,10 @@ import 'package:my_portfolio/assets_helper/app_fonts.dart';
 import 'package:my_portfolio/assets_helper/app_icons.dart';
 import 'package:my_portfolio/assets_helper/app_images.dart';
 import 'package:my_portfolio/features/profile_screen/web_widget/web_contact_us_screen.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/web_package_screen.dart';
 import 'package:my_portfolio/features/profile_screen/web_widget/web_proffessonal_experience_widget.dart';
 import 'package:my_portfolio/features/profile_screen/web_widget/web_project_screen.dart';
-import 'package:my_portfolio/features/profile_screen/web_widget/web_skill_widget.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/widgets/web_skill_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProfileWebScreen extends StatefulWidget {
@@ -18,7 +19,6 @@ class ProfileWebScreen extends StatefulWidget {
 }
 
 class _ProfileWebScreenState extends State<ProfileWebScreen> {
-  
   final String twitterProfileUrl = 'https://twitter.com/your_twitter_handle';
   final String facebookProfileUrl =
       'https://www.facebook.com/zobayer.hasan.nayem';
@@ -97,6 +97,7 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                         ),
                         Row(
                           children: [
+                            // * Home Screen
                             Text(
                               'Home',
                               style:
@@ -108,6 +109,8 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                             const SizedBox(
                               width: 20,
                             ),
+
+                            // * Projects
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
@@ -130,6 +133,32 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                             const SizedBox(
                               width: 20,
                             ),
+
+                            // * Flutter Package
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const WebPackageScreen(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'Flutter Package',
+                                style: TextFontStyle.headLine22w600Poppins
+                                    .copyWith(
+                                  fontSize: 15,
+                                  color: AppColors.cFFFFFF,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+
+                            // * Contact Us
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
@@ -835,8 +864,6 @@ class _ProfileWebScreenState extends State<ProfileWebScreen> {
                                       ),
                                     ],
                                   ),
-                                
-                                
                                 ],
                               ),
                               const SizedBox(

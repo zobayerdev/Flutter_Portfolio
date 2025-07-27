@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/assets_helper/app_colors.dart';
 import 'package:my_portfolio/assets_helper/app_fonts.dart';
 import 'package:my_portfolio/common_widgets/custom_button.dart';
-import 'package:my_portfolio/features/profile_screen/web_widget/web_project_details.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/web_package_details_screen.dart';
 
-class webFeaturedProject extends StatelessWidget {
+class webPackageWidget extends StatelessWidget {
   final String title,
       description,
       shortDescription,
@@ -24,7 +24,8 @@ class webFeaturedProject extends StatelessWidget {
       price,
       playStoreLink,
       appStoreLink;
-  const webFeaturedProject({
+
+  const webPackageWidget({
     super.key,
     required this.title,
     required this.description,
@@ -118,7 +119,7 @@ class webFeaturedProject extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => WebProjectDetails(
+                                  builder: (context) => WebPackageDetails(
                                     title: '$title',
                                     description: '$description',
                                     skills: '$skills',

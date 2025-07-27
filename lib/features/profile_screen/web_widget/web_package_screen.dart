@@ -7,18 +7,18 @@ import 'package:my_portfolio/assets_helper/app_icons.dart';
 import 'package:my_portfolio/assets_helper/app_images.dart';
 import 'package:my_portfolio/features/profile_screen/presentation/web_ui.dart';
 import 'package:my_portfolio/features/profile_screen/web_widget/web_contact_us_screen.dart';
-import 'package:my_portfolio/features/profile_screen/web_widget/web_package_screen.dart';
-import 'package:my_portfolio/features/profile_screen/web_widget/widgets/web_project_widget.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/web_project_screen.dart';
+import 'package:my_portfolio/features/profile_screen/web_widget/widgets/web_package_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class WebProjectScreen extends StatefulWidget {
-  const WebProjectScreen({super.key});
+class WebPackageScreen extends StatefulWidget {
+  const WebPackageScreen({super.key});
 
   @override
-  State<WebProjectScreen> createState() => _WebProjectScreenState();
+  State<WebPackageScreen> createState() => _WebPackageScreenState();
 }
 
-class _WebProjectScreenState extends State<WebProjectScreen> {
+class _WebPackageScreenState extends State<WebPackageScreen> {
   final String twitterProfileUrl = 'https://twitter.com/your_twitter_handle';
   final String facebookProfileUrl =
       'https://www.facebook.com/zobayer.hasan.nayem';
@@ -73,7 +73,6 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                         ),
                         Row(
                           children: [
-                            
                             // * Home Screen
                             GestureDetector(
                               onTap: () {
@@ -97,7 +96,7 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                             const SizedBox(
                               width: 20,
                             ),
-                            
+
                             // * Projects
                             GestureDetector(
                               onTap: () {
@@ -114,15 +113,15 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                                 style: TextFontStyle.headLine22w600Poppins
                                     .copyWith(
                                   fontSize: 15,
-                                  color: AppColors.c3A86FF,
+                                  color: AppColors.white,
                                 ),
                               ),
                             ),
                             const SizedBox(
                               width: 20,
                             ),
-                            
-                            // * Fluter Package
+
+                            // * Flutter Package
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
@@ -138,15 +137,15 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                                 style: TextFontStyle.headLine22w600Poppins
                                     .copyWith(
                                   fontSize: 15,
-                                  color: AppColors.white,
+                                  color: AppColors.c3A86FF,
                                 ),
                               ),
                             ),
                             const SizedBox(
                               width: 20,
                             ),
-                            
-                            // * Contact Us
+
+                            // * Contact Me
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
@@ -201,7 +200,7 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                             height: 20,
                           ),
                           Text(
-                            'My Projects',
+                            'My Flutter Packages',
                             style: TextFontStyle.headLine22w600Poppins.copyWith(
                               fontSize: 30,
                               color: AppColors.cFFFFFF,
@@ -211,7 +210,7 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                             height: 20,
                           ),
                           Text(
-                            'I have worked on several projects, including web development, mobile applications, and more. Here are some of my notable projects.',
+                            'I have already published some packages on pub.dev. You can check them out by clicking the links below.',
                             style: TextFontStyle.headLine22w600Poppins.copyWith(
                               fontSize: 15,
                               color: AppColors.cFFFFFF,
@@ -220,98 +219,14 @@ class _WebProjectScreenState extends State<WebProjectScreen> {
                           const SizedBox(
                             height: 20,
                           ),
-
-                          // * First Row [Trip Guide, Wifi Bill Manager, Holistic Horse Remedies]
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // * Trip Guide Project
-                              webFeaturedProject(
-                                title: 'Trip Guide',
-                                description:
-                                    AppDescription.tripGuideDescription,
-                                skills: 'Flutter, Dart, PHP, Laravel, MySQL',
-                                imageUrl: AppImages.trip_guide,
-                                liveLink: 'https://tripguide.zobayerdev.top',
-                                sourceCodeLink:
-                                    'https://api.whatsapp.com/send/?phone=%2B8801615257555&text&type=phone_number&app_absent=0',
-                                duration: '2 month',
-                                client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
-                                projectType: 'Guide App Related',
-                                status: 'Completed',
-                                price: 'Negotiable',
-                                playStoreLink: 'Not Available',
-                                appStoreLink: 'Not Available',
-                                shortDescription:
-                                    '🚀 TourGuide: Your Ultimate Travel Companion',
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              // * Wifi Bill Project
-                              webFeaturedProject(
-                                title: 'Wifi Bill Manager',
-                                description:
-                                    AppDescription.wifiBillManagerDescription,
-                                skills: 'Flutter, Dart, PHP, Laravel, MySQL',
-                                imageUrl: AppImages.wifi_bill_manager,
-                                liveLink: 'https://wifibill.zobayerdev.top',
-                                sourceCodeLink:
-                                    'https://api.whatsapp.com/send/?phone=%2B8801615257555&text&type=phone_number&app_absent=0',
-                                duration: '2 month',
-                                client: 'Trodev IT',
-                                techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
-                                projectType: 'Billing App Related',
-                                status: 'Completed',
-                                price: 'Negotiable',
-                                playStoreLink: 'Not Available',
-                                appStoreLink: 'Not Available',
-                                shortDescription:
-                                    '🚀 WiFi Billing Manager: Streamlined Billing & Customer Management',
-                              ),
-
-                              SizedBox(
-                                width: 20,
-                              ),
-
-                              // * Holistic Horse Remedies Project
-                              webFeaturedProject(
-                                title: 'Holistic Horse Remedies',
-                                description: AppDescription.udit,
-                                skills: 'Flutter, Dart, PHP, Laravel, MySQL',
-                                imageUrl: AppImages.udit,
-                                liveLink:
-                                    'https://play.google.com/store/apps/details?id=com.theholistichorseworks.app&hl=en',
-                                sourceCodeLink: 'Not Available',
-                                duration: '2 month',
-                                client: 'Holistic Horse Works Group',
-                                techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
-                                projectType: 'Horse Training Related',
-                                status: 'Completed',
-                                price: 'Negotiable',
-                                playStoreLink:
-                                    'https://play.google.com/store/apps/details?id=com.theholistichorseworks.app&hl=en',
-                                appStoreLink:
-                                    'https://apps.apple.com/us/app/holistic-horseworks-remedies/id6742052548',
-                                shortDescription:
-                                    '🚀 Holistic Horse Remedies: Empowering Equine Wellness',
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-
-                          // * Second Row [UIP Tv App]
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // * UIP TV App
-                              webFeaturedProject(
-                                title: 'UIP TV App',
+                              // * Custom Social Button
+                              webPackageWidget(
+                                title: 'Custtom Social Button',
                                 description: AppDescription.tvApp,
-                                skills: 'Flutter, Dart, PHP, Laravel, MySQL',
+                                skills: 'Flutter, Dart',
                                 imageUrl: AppImages.tvApp,
                                 liveLink: 'https://uiptv.zobayerdev.top',
                                 sourceCodeLink:
