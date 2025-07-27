@@ -86,6 +86,14 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
+
+    - family: Kalpurush
+      fonts:
+        - asset: assets/fonts/kalpurush.ttf
+
+    - family: Hind Siliguri
+      fonts:
+        - asset: assets/fonts/hindisiliguri.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

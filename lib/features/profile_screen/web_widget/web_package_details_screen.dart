@@ -388,9 +388,10 @@ class _WebPackageDetailsState extends State<WebPackageDetails> {
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     widget.description,
-                                    style: TextFontStyle.textStyle12w500Poppins
+                                    style: TextFontStyle.hindisiliguri10w400
                                         .copyWith(
                                       color: AppColors.cFFFFFF,
+                                      fontSize: 18,
                                     ),
                                     textAlign: TextAlign.justify,
                                   ),

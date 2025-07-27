@@ -222,25 +222,27 @@ class _WebPackageScreenState extends State<WebPackageScreen> {
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // * Custom Social Button
+                              // * Prayer Timer
                               webPackageWidget(
-                                title: 'Custtom Social Button',
-                                description: AppDescription.tvApp,
+                                title: 'Prayer Timer',
+                                description: AppDescription.prayerTimer,
                                 skills: 'Flutter, Dart',
-                                imageUrl: AppImages.tvApp,
-                                liveLink: 'https://uiptv.zobayerdev.top',
+                                imageUrl: AppImages.customSocialButton,
+                                liveLink:
+                                    'https://github.com/zobayerdev/Prayer_Timer_Package',
                                 sourceCodeLink:
                                     'https://api.whatsapp.com/send/?phone=%2B8801615257555&text&type=phone_number&app_absent=0',
                                 duration: '1 Weeks',
                                 client: 'Trodev IT',
                                 techStack: 'Flutter, Dart, PHP, Laravel, MySQL',
-                                projectType: 'Streaming App Related',
+                                projectType: 'Prayer Timer Package',
                                 status: 'Completed',
                                 price: 'Negotiable',
                                 playStoreLink: 'Not Available',
-                                appStoreLink: 'Not Available',
+                                appStoreLink:
+                                    'https://pub.dev/packages/prayer_timer',
                                 shortDescription:
-                                    '🚀 UIP TV: Your Ultimate Streaming Companion',
+                                    'Prayer Timer is a customizable circular progress bar widget for displaying Islamic prayer times in Flutter apps.',
                               ),
                               SizedBox(
                                 width: 20,

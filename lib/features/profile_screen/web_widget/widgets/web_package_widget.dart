@@ -93,6 +93,8 @@ class webPackageWidget extends StatelessWidget {
                               style:
                                   TextFontStyle.textStyle14w500Poppins.copyWith(
                                 color: AppColors.primaryColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),

@@ -31,4 +31,7 @@ class AppImages {
   static const String wifi_bill_manager = '$imageRoute/wifi_bill_manager.jpeg';
   static const String udit = '$imageRoute/udit.jpeg';
   static const String tvApp = '$imageRoute/movie.jpeg';
+
+  // * Package Images
+  static const String customSocialButton = '$imageRoute/prayer_timer.png';
 }
